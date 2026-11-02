@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velunda Support</title>
+<meta name="description" content="Help with Velunda, the private journal for iPhone and iPad.">
+<style>
+  /* The app's own palette (Palette.swift), by day and by night. */
+  :root {
+    --page: #F6F3EE;
+    --sky: #F3E2D6;
+    --paper: #FCFAF7;
+    --text: #1F1C19;
+    --secondary: #5C564F;
+    --tertiary: #7A736B;
+    --rule: #E2DDD5;
+    --accent: #A34E2E;
+    --on-accent: #FFFFFF;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #141312;
+      --sky: #24201C;
+      --paper: #24211F;
+      --text: #F2EEE8;
+      --secondary: #ADA69D;
+      --tertiary: #857E76;
+      --rule: #2E2B28;
+      --accent: #E3916F;
+      --on-accent: #1A1210;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: linear-gradient(var(--sky), var(--page) 420px) no-repeat, var(--page);
+    color: var(--text);
+    font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 56px 16px 64px; }
+  .serif { font-family: ui-serif, "New York", Georgia, "Times New Roman", serif; }
+  .eyebrow {
+    font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--secondary);
+  }
+  h1 { font-weight: 500; font-size: 40px; line-height: 1.15; margin: 4px 0 6px; }
+  .updated { font-size: 14px; color: var(--secondary); margin-bottom: 20px; }
+  .lead { font-size: 20px; line-height: 1.45; margin-bottom: 28px; }
+  section {
+    background: var(--paper); border-radius: 22px; padding: 20px 22px; margin-bottom: 14px;
+  }
+  section h2 { margin-bottom: 10px; }
+  section p + p, section p + ul, section ul + p { margin-top: 10px; }
+  ul { padding-left: 20px; }
+  li + li { margin-top: 8px; }
+  b { font-weight: 600; }
+  .mail {
+    display: inline-block; margin-top: 12px; padding: 10px 18px; border-radius: 22px;
+    background: var(--accent); color: var(--on-accent); font-weight: 600; text-decoration: none;
+  }
+  section a:not(.mail) { color: var(--accent); }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer { margin-top: 28px; text-align: center; font-size: 14px; color: var(--tertiary); }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Velunda</div>
+  <h1 class="serif">Support</h1>
+  <p class="lead serif">Something not working, or a question about your journal? Write to us and a person will answer.</p>
+
+  <section>
+    <h2 class="eyebrow">Contact</h2>
+    <p><a href="mailto:velunda.app@outlook.com">velunda.app@outlook.com</a></p>
+    <p>It helps to say which device and iOS version you use. Please don’t send anything you wrote in your journal: we never need it.</p>
+    <a class="mail" href="mailto:velunda.app@outlook.com?subject=Velunda">Email us</a>
+  </section>
+
+  <section>
+    <h2 class="eyebrow">My journal isn’t on my other device</h2>
+    <ul>
+      <li>Both devices must be signed in to the same Apple Account, with iCloud on.</li>
+      <li>Open Velunda on both, with a connection, and give it a minute: changes travel in the background.</li>
+      <li>In Velunda, Settings &gt; iCloud shows what is happening, for example if iCloud is full.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="eyebrow">I bought Velunda but it looks locked</h2>
+    <p>Open the unlock page (Settings &gt; Purchase) and tap <b>Restore Purchase</b>. Make sure the App Store on this device is signed in to the Apple Account you bought with. Velunda is shared with your Family Sharing group.</p>
+  </section>
+
+  <section>
+    <h2 class="eyebrow">The free week</h2>
+    <p>Velunda gives you seven days with everything, free. After that, unlocking it is a single purchase: no subscription. Whatever you decide, everything you wrote stays yours to read, search and export.</p>
+  </section>
+
+  <section>
+    <h2 class="eyebrow">Keeping a copy of your journal</h2>
+    <p>Settings &gt; Export Journal makes a backup you can import again, Markdown files, a PDF, or all of them in one archive. The book of the year is in Look Back.</p>
+  </section>
+
+  <section>
+    <h2 class="eyebrow">I deleted an entry by mistake</h2>
+    <p>Deleted entries stay in Recently Deleted (Settings &gt; Recently Deleted) for 30 days. Open one and tap Recover.</p>
+  </section>
+
+  <section>
+    <h2 class="eyebrow">App lock</h2>
+    <p>The lock uses Face ID, Touch ID or your device passcode, so you can always unlock with your passcode. To use the lock at all, the device needs a passcode.</p>
+  </section>
+
+  <footer><a href="../privacy/">Privacy Policy</a></footer>
+</main>
+</body>
+</html>
