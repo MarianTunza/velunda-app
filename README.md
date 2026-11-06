@@ -9,4 +9,4 @@ iPhone and iPad.
 Velunda collects nothing: your journal stays on your devices and in your own
 end-to-end encrypted iCloud.
 
-Contact: velunda.app@outlook.com
+Contact: contact@getvelunda.com
