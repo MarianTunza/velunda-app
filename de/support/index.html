@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velunda Support</title>
+<meta name="description" content="Hilfe zu Velunda, dem privaten Tagebuch für iPhone und iPad.">
+<style>
+  /* The app's own palette (Palette.swift), by day and by night. */
+  :root {
+    --page: #F6F3EE;
+    --sky: #F3E2D6;
+    --paper: #FCFAF7;
+    --text: #1F1C19;
+    --secondary: #5C564F;
+    --tertiary: #7A736B;
+    --rule: #E2DDD5;
+    --accent: #A34E2E;
+    --on-accent: #FFFFFF;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #141312;
+      --sky: #24201C;
+      --paper: #24211F;
+      --text: #F2EEE8;
+      --secondary: #ADA69D;
+      --tertiary: #857E76;
+      --rule: #2E2B28;
+      --accent: #E3916F;
+      --on-accent: #1A1210;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: linear-gradient(var(--sky), var(--page) 420px) no-repeat, var(--page);
+    color: var(--text);
+    font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 56px 16px 64px; }
+  .serif { font-family: ui-serif, "New York", Georgia, "Times New Roman", serif; }
+  .eyebrow {
+    font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--secondary);
+  }
+  h1 { font-weight: 500; font-size: 40px; line-height: 1.15; margin: 4px 0 6px; }
+  .updated { font-size: 14px; color: var(--secondary); margin-bottom: 20px; }
+  .lead { font-size: 20px; line-height: 1.45; margin-bottom: 28px; }
+  section {
+    background: var(--paper); border-radius: 22px; padding: 20px 22px; margin-bottom: 14px;
+  }
+  section h2 { margin-bottom: 10px; }
+  section p + p, section p + ul, section ul + p { margin-top: 10px; }
+  ul { padding-left: 20px; }
+  li + li { margin-top: 8px; }
+  b { font-weight: 600; }
+  .mail {
+    display: inline-block; margin-top: 12px; padding: 10px 18px; border-radius: 22px;
+    background: var(--accent); color: var(--on-accent); font-weight: 600; text-decoration: none;
+  }
+  section a:not(.mail) { color: var(--accent); }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer { margin-top: 28px; text-align: center; font-size: 14px; color: var(--tertiary); }
+  .langs { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: center; margin-top: 14px; font-size: 13px; }
+  .langs a { text-decoration: none; opacity: .75; }
+  .langs a[aria-current] { opacity: 1; font-weight: 600; }
+</style>
+<link rel="canonical" href="https://www.getvelunda.com/de/support/">
+<link rel="alternate" hreflang="en" href="https://www.getvelunda.com/support/">
+<link rel="alternate" hreflang="it" href="https://www.getvelunda.com/it/support/">
+<link rel="alternate" hreflang="es" href="https://www.getvelunda.com/es/support/">
+<link rel="alternate" hreflang="fr" href="https://www.getvelunda.com/fr/support/">
+<link rel="alternate" hreflang="de" href="https://www.getvelunda.com/de/support/">
+<link rel="alternate" hreflang="x-default" href="https://www.getvelunda.com/support/">
+</head>
+<body>
+<main>
+  <div class="eyebrow">Velunda</div>
+  <h1 class="serif">Support</h1>
+  <p class="lead serif">Funktioniert etwas nicht, oder hast du eine Frage zu deinem Tagebuch? Schreib uns, und ein Mensch antwortet dir.</p>
+
+  <section>
+    <h2 class="eyebrow">Kontakt</h2>
+    <p><a href="mailto:contact@getvelunda.com">contact@getvelunda.com</a></p>
+    <p>Es hilft, wenn du uns sagst, welches Gerät und welche iOS-Version du nutzt. Bitte schick uns nichts von dem, was du in dein Tagebuch geschrieben hast: Das brauchen wir nie.</p>
+    <a class="mail" href="mailto:contact@getvelunda.com?subject=Velunda">Schreib uns</a>
+  </section>
+
+  <section>
+    <h2 class="eyebrow">Mein Tagebuch ist auf meinem anderen Gerät nicht da</h2>
+    <ul>
+      <li>Beide Geräte müssen mit demselben Apple Account angemeldet sein, und iCloud muss aktiviert sein.</li>
+      <li>Öffne Velunda auf beiden Geräten, während sie online sind, und gib ihnen eine Minute: Änderungen werden im Hintergrund synchronisiert.</li>
+      <li>In Velunda zeigt Einstellungen &gt; iCloud den Stand der Synchronisierung, zum Beispiel wenn dein iCloud-Speicher voll ist.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="eyebrow">Ich habe Velunda gekauft, aber es wirkt gesperrt</h2>
+    <p>Öffne die Seite zum Freischalten (Einstellungen &gt; Kauf) und tippe auf <b>Kauf wiederherstellen</b>. Achte darauf, dass der App Store auf diesem Gerät mit dem Apple Account angemeldet ist, mit dem du gekauft hast. Mit der Familienfreigabe bekommt auch deine Familie Velunda.</p>
+  </section>
+
+  <section>
+    <h2 class="eyebrow">Die Gratiswoche</h2>
+    <p>Velunda gibt dir sieben Tage lang alles gratis. Danach schaltest du es mit einem einzigen Kauf frei: kein Abo. Wie auch immer du dich entscheidest: Alles, was du geschrieben hast, bleibt deins, zum Lesen, Durchsuchen und Exportieren.</p>
+  </section>
+
+  <section>
+    <h2 class="eyebrow">Eine Kopie deines Tagebuchs behalten</h2>
+    <p>Unter Einstellungen &gt; Tagebuch exportieren kannst du ein Backup sichern (das du wieder importieren kannst), Markdown-Dateien, ein PDF oder alles zusammen in einem Archiv. Das Jahresbuch findest du im Rückblick.</p>
+  </section>
+
+  <section>
+    <h2 class="eyebrow">Ich habe versehentlich einen Eintrag gelöscht</h2>
+    <p>Gelöschte Einträge bleiben 30 Tage lang unter Zuletzt gelöscht (Einstellungen &gt; Zuletzt gelöscht). Öffne einen und tippe auf Wiederherstellen.</p>
+  </section>
+
+  <section>
+    <h2 class="eyebrow">App-Sperre</h2>
+    <p>Wenn Face ID oder Touch ID nicht funktioniert, kannst du immer mit dem Code deines Geräts entsperren. Für die Sperre muss auf dem Gerät ein Code eingerichtet sein.</p>
+  </section>
+
+  <footer><a href="../privacy/">Datenschutz</a><nav class="langs" aria-label="Language"><a href="../../support/" hreflang="en" lang="en">English</a><a href="../../it/support/" hreflang="it" lang="it">Italiano</a><a href="../../es/support/" hreflang="es" lang="es">Español</a><a href="../../fr/support/" hreflang="fr" lang="fr">Français</a><a href="../../de/support/" hreflang="de" lang="de" aria-current="page">Deutsch</a></nav></footer>
+</main>
+</body>
+</html>

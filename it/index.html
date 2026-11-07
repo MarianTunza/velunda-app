@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="it" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-itunes-app" content="app-id=6822210222">
+<title>Velunda: diario privato per iPhone e iPad</title>
+<meta name="description" content="Un luogo privato per scrivere, riflettere e ricordare. Nessun account, niente pubblicità, niente IA. Sette giorni gratis, poi paghi una volta sola: nessun abbonamento.">
+<meta name="theme-color" content="#1A1517">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Velunda: Diario Privato">
+<meta property="og:description" content="Un luogo privato per scrivere, riflettere e ricordare. Nessun account, niente pubblicità, niente IA.">
+<meta property="og:image" content="https://www.getvelunda.com/images/og.jpg">
+<meta property="og:url" content="https://www.getvelunda.com/it/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.getvelunda.com/it/">
+<link rel="alternate" hreflang="en" href="https://www.getvelunda.com/">
+<link rel="alternate" hreflang="it" href="https://www.getvelunda.com/it/">
+<link rel="alternate" hreflang="es" href="https://www.getvelunda.com/es/">
+<link rel="alternate" hreflang="fr" href="https://www.getvelunda.com/fr/">
+<link rel="alternate" hreflang="de" href="https://www.getvelunda.com/de/">
+<link rel="alternate" hreflang="x-default" href="https://www.getvelunda.com/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "Velunda",
+ "alternateName": "Velunda: Private Journal",
+ "url": "https://www.getvelunda.com/it/",
+ "description": "A private journal for iPhone and iPad: a question for the day, close the day, memories that come back, and your year as a book. No account, no ads, no AI.",
+ "applicationCategory": "LifestyleApplication",
+ "operatingSystem": "iOS, iPadOS",
+ "downloadUrl": "https://apps.apple.com/app/id6822210222",
+ "inLanguage": [
+  "en",
+  "it",
+  "es",
+  "fr",
+  "de"
+ ],
+ "image": "https://www.getvelunda.com/images/og.jpg",
+ "author": {
+  "@type": "Person",
+  "name": "Marian Tunza"
+ }
+}
+</script>
+<link rel="icon" href="../images/icon.png">
+<link rel="apple-touch-icon" href="../images/icon.png">
+<style>
+  /* The app's dusk, from the top of the page to the bottom. */
+  :root {
+    --night: #1A1517;
+    --card: #231D1E;
+    --text: #F2EEE8;
+    --secondary: #C2B8AE;
+    --tertiary: #8F867D;
+    --line: rgba(242,238,232,.12);
+    --accent: #E3916F;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--night); color: var(--text);
+    font: 18px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased;
+  }
+  .serif { font-family: ui-serif, "New York", Georgia, "Times New Roman", serif; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  h1, h2, h3 { font-weight: 500; text-wrap: balance; }
+  h2 { font-size: 50px; line-height: 1.06; letter-spacing: -.01em; margin: 14px 0 18px; }
+  p { color: var(--secondary); }
+  .badge { display: inline-block; }
+  .badge img { display: block; height: 54px; width: auto; }
+  .note { font-size: 14px; color: var(--tertiary); margin-top: 14px; }
+  img { display: block; max-width: 100%; height: auto; }
+  section { padding-top: 150px; }
+
+  /* Hero: the words on the left, one whole iPhone on the right, under the evening sky. */
+  .hero {
+    position: relative; overflow: hidden;
+    background:
+      linear-gradient(to bottom, rgba(26,21,23,0) 55%, var(--night)),
+      linear-gradient(90deg, #ECC6AF, #B07763 25%, #7C514B 50%, #4C3740 75%, #1C161A);
+  }
+  .bar { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; position: relative; z-index: 1; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-size: 21px; font-weight: 500; }
+  .brand img { width: 32px; height: 32px; border-radius: 8px; }
+  .bar nav { display: flex; gap: 24px; }
+  .bar nav a { color: rgba(242,238,232,.85); text-decoration: none; font-size: 15px; }
+  .hero-grid {
+    position: relative; z-index: 1;
+    display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center;
+    padding: 56px 0 96px;
+  }
+  .hero h1 { font-size: 72px; line-height: 1.02; letter-spacing: -.015em; }
+  .hero .lead { font-size: 22px; color: rgba(242,238,232,.9); margin: 22px 0 32px; max-width: 470px; }
+  .hero .note { color: rgba(242,238,232,.72); }
+  .hero .phone { justify-self: center; width: 100%; max-width: 330px; }
+  .stars { position: absolute; inset: 0; pointer-events: none; }
+  .stars i { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: #FFF4EA; opacity: .6; box-shadow: 0 0 6px rgba(255,244,234,.6); }
+  .stars i.s { width: 2px; height: 2px; opacity: .45; }
+
+  /* What it is not. */
+  .nots { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding-top: 8px; }
+  .nots span {
+    border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px;
+    font-size: 15px; color: var(--secondary);
+  }
+
+  /* The story of a day: words beside a whole iPhone, sides alternating. */
+  .intro { text-align: center; max-width: 720px; margin: 0 auto; }
+  .intro p { font-size: 19px; }
+  .time { font-size: 14px; color: var(--tertiary); font-variant-numeric: tabular-nums; }
+  .time b { color: var(--accent); font-weight: 600; letter-spacing: .14em; font-size: 12px; text-transform: uppercase; margin-right: 10px; }
+
+  /* The story: words scroll, the phone holds still beside them and its screen changes. */
+  .story { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; margin-top: 40px; }
+  .step { min-height: 88vh; display: flex; flex-direction: column; justify-content: center; opacity: .3; transition: opacity .5s ease; }
+  .step.on, .no-js .step { opacity: 1; }
+  .step h3 { font-size: 40px; line-height: 1.1; margin: 12px 0 16px; }
+  .step p { font-size: 19px; max-width: 440px; }
+  .step .inline { display: none; }
+  .screen { position: relative; }
+  .stack { position: sticky; top: calc(50vh - 330px); width: 100%; max-width: 320px; margin: 0 auto; aspect-ratio: 760 / 1551; }
+  .stack img { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .6s ease; }
+  .stack img.on { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .step, .stack img { transition: none; } }
+
+  /* The book. */
+  .center { text-align: center; max-width: 720px; margin: 0 auto; }
+  .center p { font-size: 19px; }
+  /* The book on iPad, in the app's own preview: the iPad is wide, so it takes more room. */
+  .book-story { grid-template-columns: 3fr 9fr; gap: 40px; }
+  .book-story .stack { top: calc(50vh - 320px); max-width: none; aspect-ratio: 1600 / 1227; }
+  .book-story .step .inline { max-width: 100%; }
+
+  /* iPad e Apple Pencil. */
+  .pad { width: 100%; margin: 56px auto 0; max-width: 1000px; }
+
+  /* Privacy. */
+  .private { text-align: center; }
+  .private .lead { font-size: 19px; max-width: 640px; margin: 0 auto; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 52px; text-align: left; }
+  .cards > div {
+    border: 1px solid var(--line); border-radius: 24px; padding: 26px 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.01));
+  }
+  .cards h3 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+  .cards p { font-size: 16px; }
+
+  /* Price: two plain columns, no small print. */
+  .price { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 48px; }
+  .price > div { border: 1px solid var(--line); border-radius: 24px; padding: 30px 28px; background: var(--card); }
+  .price .big { font-size: 34px; line-height: 1.1; margin: 10px 0 12px; }
+  .price p { font-size: 16px; }
+
+  /* Questions. */
+  .faq { max-width: 760px; margin: 44px auto 0; }
+  .faq details { border-top: 1px solid var(--line); padding: 20px 0; }
+  .faq details:last-child { border-bottom: 1px solid var(--line); }
+  .faq summary { cursor: pointer; list-style: none; font-size: 19px; display: flex; justify-content: space-between; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--accent); font-size: 22px; line-height: 1; }
+  .faq details[open] summary::after { content: "–"; }
+  .faq p { font-size: 16px; margin-top: 10px; max-width: 640px; }
+
+  /* Closing: the warm horizon under the last call. */
+  .closing {
+    margin-top: 160px; padding: 120px 0 0; text-align: center;
+    background: radial-gradient(120% 90% at 50% 100%, #B07763 0%, #6E4339 35%, rgba(26,21,23,0) 75%);
+  }
+  .closing .icon { width: 96px; height: 96px; border-radius: 22px; margin: 0 auto; box-shadow: 0 16px 40px rgba(0,0,0,.4); }
+  .closing h2 { margin-top: 26px; }
+  .closing p { font-size: 19px; color: rgba(242,238,232,.85); }
+  .closing .badge { margin-top: 30px; }
+  .closing .note { color: rgba(242,238,232,.72); }
+  footer {
+    margin-top: 110px; padding: 24px 0 40px; border-top: 1px solid rgba(242,238,232,.18);
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    font-size: 14px; color: rgba(242,238,232,.75); text-align: left;
+  }
+  footer nav { display: flex; gap: 22px; }
+  footer a { color: var(--text); text-decoration: none; }
+  footer .legal { flex-basis: 100%; font-size: 12px; line-height: 1.5; color: rgba(242,238,232,.55); }
+
+  @media (max-width: 860px) {
+    section { padding-top: 100px; }
+    .bar nav { display: none; }
+    .hero-grid { grid-template-columns: 1fr; gap: 44px; padding: 32px 0 72px; text-align: center; }
+    .hero h1 { font-size: 46px; }
+    .hero .lead { font-size: 19px; margin: 18px auto 26px; }
+    .hero .phone { max-width: 260px; }
+    h2 { font-size: 36px; }
+            .cards, .price { grid-template-columns: 1fr; }
+    /* On a phone the words and screens simply follow each other. */
+    .story { display: block; margin-top: 0; }
+    .screen { display: none; }
+    .step { min-height: 0; opacity: 1; padding-top: 80px; }
+    .step h3 { font-size: 32px; }
+    .step .inline { display: block; width: 100%; max-width: 260px; margin: 36px auto 0; }
+    .closing { margin-top: 110px; padding-top: 90px; }
+    footer { justify-content: center; text-align: center; }
+  }
+  .langs { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: center; margin-top: 14px; font-size: 13px; }
+  .langs a { text-decoration: none; opacity: .75; }
+  .langs a[aria-current] { opacity: 1; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="stars" aria-hidden="true">
+    <i style="left:58%;top:6%"></i><i class="s" style="left:64%;top:18%"></i><i class="s" style="left:71%;top:9%"></i>
+    <i style="left:79%;top:24%"></i><i class="s" style="left:84%;top:7%"></i><i class="s" style="left:90%;top:33%"></i>
+    <i style="left:94%;top:14%"></i><i class="s" style="left:97%;top:28%"></i><i class="s" style="left:75%;top:44%"></i>
+    <i class="s" style="left:88%;top:52%"></i><i class="s" style="left:62%;top:38%"></i><i class="s" style="left:97%;top:60%"></i>
+  </div>
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand serif" href="./"><img src="../images/icon.png" alt="" width="32" height="32">Velunda</a>
+      <nav><a href="#book">Il libro</a><a href="#privacy">Privacy</a><a href="#price">Prezzo</a><a href="support/">Assistenza</a></nav>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <h1 class="serif">Il diario<br>che è solo tuo.</h1>
+        <p class="lead serif">Poche righe sincere al giorno, custodite per anni e lette soltanto da te. Su iPhone e iPad.</p>
+        <a class="badge" href="https://apps.apple.com/app/id6822210222"><img src="../images/app-store-badge-it.svg" alt="Scarica su App Store" width="162" height="54"></a>
+        <p class="note">Sette giorni gratis, poi paghi una volta sola. Nessun abbonamento.</p>
+      </div>
+      <img class="phone" src="../images/it/phone-today.webp" alt="La schermata Oggi di Velunda: la domanda del giorno e una pagina di sei anni fa" width="760" height="1551" fetchpriority="high">
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="nots" aria-label="Cosa non ha Velunda">
+    <span>Nessun account</span><span>Niente pubblicità</span><span>Nessun tracciamento</span><span>Niente IA</span><span>Nessun abbonamento</span><span>Niente serie da mantenere</span>
+  </div>
+
+  <section>
+    <div class="intro">
+      <div class="eyebrow">Una giornata con Velunda</div>
+      <h2 class="serif">Cinque minuti di calma che danno forma a una vita.</h2>
+      <p>Ogni mattina una domanda da cui partire, e un’altra se quella non fa per te. Modelli per il mattino, la sera, le giornate difficili e le grandi decisioni. Mai più una pagina bianca.</p>
+    </div>
+
+    <!-- The phone stays put while the words go by; only its screen changes. -->
+    <div class="story">
+      <div class="steps">
+        <div class="step" data-screen="0">
+          <p class="time"><b>Sera</b>21:15</p>
+          <h3 class="serif">Lascia andare la giornata.</h3>
+          <p>Quattro brevi domande prima di dormire, e puoi saltare quelle che vuoi. Una parola o una pagina intera: in ogni caso, la giornata resta.</p>
+          <img class="inline" src="../images/it/phone-close.webp" alt="Chiudi la giornata: cosa ti è rimasto di oggi?" width="760" height="1551" loading="lazy" decoding="async">
+        </div>
+        <div class="step" data-screen="1">
+          <p class="time"><b>Anni dopo</b>Nello stesso giorno</p>
+          <h3 class="serif">Il passato torna da sé.</h3>
+          <p>Scrivi un ricordo con il giorno in cui è successo davvero: il tuo primo appartamento, un’estate di tanti anni fa. Ogni anno, in quella data, Velunda te lo riporta.</p>
+          <img class="inline" src="../images/it/phone-memories.webp" alt="Un ricordo del 26 ottobre 2020" width="760" height="1551" loading="lazy" decoding="async">
+        </div>
+        <div class="step" data-screen="2">
+          <p class="time"><b>Mese dopo mese</b>Le tue abitudini, non un punteggio</p>
+          <h3 class="serif">Conosciti meglio.</h3>
+          <p>Quanto spesso scrivi, a cosa torni di continuo, come cambia il tuo umore nel tempo. Tutto calcolato sul dispositivo. Nessuna serie da mantenere, nessun punteggio da inseguire.</p>
+          <img class="inline" src="../images/it/phone-insights.webp" alt="Statistiche: giorni scritti questa settimana e questo mese" width="760" height="1551" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <div class="screen" aria-hidden="true">
+        <div class="stack">
+          <img class="on" src="../images/it/phone-close.webp" alt="" width="760" height="1551" decoding="async">
+          <img src="../images/it/phone-memories.webp" alt="" width="760" height="1551" decoding="async">
+          <img src="../images/it/phone-insights.webp" alt="" width="760" height="1551" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="center">
+      <div class="eyebrow">Alla fine dell’anno</div>
+      <h2 class="serif">Un anno della tua vita, con parole tue.</h2>
+      <p>Alla fine dell’anno, Velunda trasforma tutto ciò che hai scritto in un libro pronto per la stampa. Scorri per sfogliarne uno.</p>
+    </div>
+    <!-- The book stays put while the words go by; its page turns. -->
+    <div class="story book-story">
+      <div class="steps">
+        <div class="step" data-screen="0">
+          <p class="time"><b>La copertina</b></p>
+          <h3 class="serif">Il tuo titolo, il tuo nome.</h3>
+          <p>Scegli una copertina nei colori del mattino o del tramonto e dai al tuo anno un titolo tutto suo.</p>
+          <img class="inline" src="../images/it/page-cover.webp" alt="La copertina del libro del 2026 su iPad" width="1600" height="1227" loading="lazy" decoding="async">
+        </div>
+        <div class="step" data-screen="1">
+          <p class="time"><b>Le prime pagine</b></p>
+          <h3 class="serif">Ogni giorno in cui hai scritto, a colpo d’occhio.</h3>
+          <p>Il libro si apre con il calendario di tutto l’anno: un quadratino per ogni giorno in cui hai scritto.</p>
+          <img class="inline" src="../images/it/page-calendar.webp" alt="L’indice e il calendario dei giorni scritti" width="1600" height="1227" loading="lazy" decoding="async">
+        </div>
+        <div class="step" data-screen="2">
+          <p class="time"><b>All’interno</b></p>
+          <h3 class="serif">Un capitolo per ogni mese.</h3>
+          <p>Ognuno si apre con una frase di quel mese, poi vengono tutti i giorni in cui hai scritto, le domande della sera e le tue riflessioni.</p>
+          <img class="inline" src="../images/it/page-chapter.webp" alt="L’apertura del capitolo di ottobre" width="1600" height="1227" loading="lazy" decoding="async">
+        </div>
+        <div class="step" data-screen="3">
+          <p class="time"><b>I tuoi disegni</b></p>
+          <h3 class="serif">Anche i giorni che hai disegnato.</h3>
+          <p>I disegni restano sulla pagina in cui li hai fatti, con il giorno in cui sono nati.</p>
+          <img class="inline" src="../images/it/page-drawing.webp" alt="Una pagina con un disegno di tulipani" width="1600" height="1227" loading="lazy" decoding="async">
+        </div>
+        <div class="step" data-screen="4">
+          <p class="time"><b>Il retro di copertina</b></p>
+          <h3 class="serif">E le tue prime parole dell’anno.</h3>
+          <p>Il libro si chiude con la primissima cosa che hai scritto quell’anno. Creato sul tuo dispositivo, mai caricato altrove.</p>
+          <img class="inline" src="../images/it/page-back.webp" alt="L’ultima pagina e il retro di copertina, con le prime parole dell’anno" width="1600" height="1227" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <div class="screen" aria-hidden="true">
+        <div class="stack">
+          <img class="on" src="../images/it/page-cover.webp" alt="" width="1600" height="1227" loading="lazy" decoding="async">
+          <img src="../images/it/page-calendar.webp" alt="" width="1600" height="1227" loading="lazy" decoding="async">
+          <img src="../images/it/page-chapter.webp" alt="" width="1600" height="1227" loading="lazy" decoding="async">
+          <img src="../images/it/page-drawing.webp" alt="" width="1600" height="1227" loading="lazy" decoding="async">
+          <img src="../images/it/page-back.webp" alt="" width="1600" height="1227" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="center">
+      <div class="eyebrow">iPad e Apple Pencil</div>
+      <h2 class="serif">Spazio per scrivere. Spazio per disegnare.</h2>
+      <p>Su iPad il calendario sta proprio accanto alla pagina. E nei giorni in cui le parole non arrivano, prendi Apple Pencil: il disegno resta con la pagina e finisce nel tuo libro.</p>
+    </div>
+    <img class="pad" src="../images/it/ipad-drawing.webp" alt="Tulipani in un vaso, disegnati su iPad" width="1600" height="1227" loading="lazy" decoding="async">
+  </section>
+
+  <section id="privacy" class="private">
+    <div class="eyebrow">Privato per scelta</div>
+    <h2 class="serif">I tuoi pensieri non riguardano nessun altro.</h2>
+    <p class="lead">Nessun account. Niente pubblicità. Nessun tracciamento. Nessuna analisi dei dati. Velunda non raccoglie nulla, e ciò che scrivi è protetto da crittografia end-to-end.</p>
+    <div class="cards">
+      <div><h3>Crittografia end-to-end</h3><p>Il diario si sincronizza con il tuo iCloud privato e tutto ciò che scrivi è crittografato.</p></div>
+      <div><h3>Bloccato quando vuoi</h3><p>Face ID o Touch ID. Widget e promemoria non mostrano mai ciò che hai scritto.</p></div>
+      <div><h3>Sempre tuo</h3><p>Esporta un backup completo, in Markdown o in PDF, quando vuoi.</p></div>
+    </div>
+  </section>
+
+  <section id="price">
+    <div class="center">
+      <div class="eyebrow">Prezzo</div>
+      <h2 class="serif">Prova tutto gratis. Poi paghi una volta sola.</h2>
+    </div>
+    <div class="price">
+      <div>
+        <div class="eyebrow">La prima settimana</div>
+        <p class="big serif" style="color:var(--text)">Gratis, con tutto incluso.</p>
+        <p>Sette giorni con tutte le funzioni, fin dalla prima pagina. Nessuna registrazione.</p>
+      </div>
+      <div>
+        <div class="eyebrow">Dopo</div>
+        <p class="big serif" style="color:var(--text)">Tuo per sempre.</p>
+        <p>Un solo acquisto, nessun abbonamento. Con In famiglia lo ricevono anche i tuoi familiari. E qualunque cosa tu decida, ogni pagina che hai scritto resta tua: puoi sempre leggerla, cercarla ed esportarla.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="center">
+      <div class="eyebrow">Domande</div>
+      <h2 class="serif">Buono a sapersi.</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Qualcun altro può leggere il mio diario?</summary>
+        <p>No. Velunda non ha account né un server suo. Il diario resta sui tuoi dispositivi e nel tuo iCloud privato, dove tutto ciò che scrivi è protetto da crittografia end-to-end.</p>
+      </details>
+      <details>
+        <summary>Cosa succede dopo la settimana gratuita?</summary>
+        <p>Per scrivere e modificare serve l’acquisto unico. Tutto ciò che hai già scritto resta leggibile, ricercabile ed esportabile, che tu lo acquisti o no.</p>
+      </details>
+      <details>
+        <summary>Si sincronizza tra iPhone e iPad?</summary>
+        <p>Sì, tramite iCloud, quando entrambi i dispositivi usano lo stesso Account Apple.</p>
+      </details>
+      <details>
+        <summary>Posso portare il mio diario con me?</summary>
+        <p>Sì. Puoi esportare un backup da importare di nuovo, file Markdown, un PDF, oppure tutti e tre in un unico archivio.</p>
+      </details>
+      <details>
+        <summary>In quali lingue è disponibile?</summary>
+        <p>Italiano, inglese, spagnolo, francese e tedesco.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<section class="closing">
+  <div class="wrap">
+    <img class="icon" src="../images/icon.png" alt="" width="96" height="96">
+    <h2 class="serif">La tua storia merita di essere custodita.</h2>
+    <p>Inizia stasera. La prima settimana la offriamo noi.</p>
+    <a class="badge" href="https://apps.apple.com/app/id6822210222"><img src="../images/app-store-badge-it.svg" alt="Scarica su App Store" width="162" height="54"></a>
+    <footer>
+      <span>© 2026 Marian Tunza</span>
+      <nav><a href="support/">Assistenza</a><a href="privacy/">Privacy</a><a href="mailto:contact@getvelunda.com">Contatti</a></nav>
+      <p class="legal">Apple, il logo Apple, iPhone, iPad e Apple Pencil sono marchi di Apple Inc., registrati negli Stati Uniti e in altri Paesi. App Store è un marchio di servizio di Apple Inc., registrato negli Stati Uniti e in altri Paesi.</p>
+    
+    
+    
+    
+    <nav class="langs" aria-label="Language"><a href="../" hreflang="en" lang="en">English</a><a href="../it/" hreflang="it" lang="it" aria-current="page">Italiano</a><a href="../es/" hreflang="es" lang="es">Español</a><a href="../fr/" hreflang="fr" lang="fr">Français</a><a href="../de/" hreflang="de" lang="de">Deutsch</a></nav>
+    </footer>
+  </div>
+</section>
+
+<script>
+  // In each story, shows the picture of the step that sits in the middle of the window.
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    document.documentElement.classList.remove('no-js');
+    document.querySelectorAll('.story').forEach(function (story) {
+      var steps = story.querySelectorAll('.step'), pics = story.querySelectorAll('.stack img');
+      function show(i) {
+        steps.forEach(function (s, k) { s.classList.toggle('on', k === i); });
+        pics.forEach(function (p, k) { p.classList.toggle('on', k === i); });
+      }
+      show(0);
+      var seen = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) show(+e.target.dataset.screen); });
+      }, { rootMargin: '-50% 0px -50% 0px' });
+      steps.forEach(function (s) { seen.observe(s); });
+    });
+  })();
+</script>
+</body>
+</html>

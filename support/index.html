@@ -63,8 +63,17 @@
   section a:not(.mail) { color: var(--accent); }
   footer a { color: var(--accent); text-decoration: none; }
   footer { margin-top: 28px; text-align: center; font-size: 14px; color: var(--tertiary); }
+  .langs { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: center; margin-top: 14px; font-size: 13px; }
+  .langs a { text-decoration: none; opacity: .75; }
+  .langs a[aria-current] { opacity: 1; font-weight: 600; }
 </style>
 <link rel="canonical" href="https://www.getvelunda.com/support/">
+<link rel="alternate" hreflang="en" href="https://www.getvelunda.com/support/">
+<link rel="alternate" hreflang="it" href="https://www.getvelunda.com/it/support/">
+<link rel="alternate" hreflang="es" href="https://www.getvelunda.com/es/support/">
+<link rel="alternate" hreflang="fr" href="https://www.getvelunda.com/fr/support/">
+<link rel="alternate" hreflang="de" href="https://www.getvelunda.com/de/support/">
+<link rel="alternate" hreflang="x-default" href="https://www.getvelunda.com/support/">
 </head>
 <body>
 <main>
@@ -113,7 +122,7 @@
     <p>If Face ID or Touch ID doesn’t work, you can always unlock with your device passcode. The lock needs a passcode to be set on the device.</p>
   </section>
 
-  <footer><a href="../privacy/">Privacy Policy</a></footer>
+  <footer><a href="../privacy/">Privacy Policy</a><nav class="langs" aria-label="Language"><a href="../support/" hreflang="en" lang="en" aria-current="page">English</a><a href="../it/support/" hreflang="it" lang="it">Italiano</a><a href="../es/support/" hreflang="es" lang="es">Español</a><a href="../fr/support/" hreflang="fr" lang="fr">Français</a><a href="../de/support/" hreflang="de" lang="de">Deutsch</a></nav></footer>
 </main>
 </body>
 </html>
