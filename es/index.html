@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="apple-itunes-app" content="app-id=6822210222">
 <title>Velunda: diario privado para iPhone y iPad</title>
-<meta name="description" content="Un lugar privado para escribir, reflexionar y recordar. Sin cuenta, sin anuncios, sin IA. Siete días gratis y después un único pago: sin suscripciones.">
+<meta name="description" content="Un diario privado para iPhone y iPad: palabras, fotos y tu voz, recuerdos que vuelven y tu año en un libro de verdad. Sin cuenta, sin anuncios, sin IA. Siete días gratis y después un único pago.">
 <meta name="theme-color" content="#1A1517">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Velunda: diario privado">
-<meta property="og:description" content="Un lugar privado para escribir, reflexionar y recordar. Sin cuenta, sin anuncios, sin IA.">
-<meta property="og:image" content="https://www.getvelunda.com/images/og.jpg">
+<meta property="og:description" content="Palabras, fotos y tu voz, guardadas durante años. Sin cuenta, sin anuncios, sin IA.">
+<meta property="og:image" content="https://www.getvelunda.com/images/v11/es/og.jpg">
 <meta property="og:url" content="https://www.getvelunda.com/es/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.getvelunda.com/es/">
@@ -27,7 +27,7 @@
  "name": "Velunda",
  "alternateName": "Velunda: Private Journal",
  "url": "https://www.getvelunda.com/es/",
- "description": "A private journal for iPhone and iPad: a question for the day, close the day, memories that come back, and your year as a book. No account, no ads, no AI.",
+ "description": "Un diario privado para iPhone y iPad: palabras, fotos y tu voz, recuerdos que vuelven y tu año en un libro de verdad. Sin cuenta, sin anuncios, sin IA. Siete días gratis y después un único pago.",
  "applicationCategory": "LifestyleApplication",
  "operatingSystem": "iOS, iPadOS",
  "downloadUrl": "https://apps.apple.com/app/id6822210222",
@@ -38,7 +38,7 @@
   "fr",
   "de"
  ],
- "image": "https://www.getvelunda.com/images/og.jpg",
+ "image": "https://www.getvelunda.com/images/v11/es/og.jpg",
  "author": {
   "@type": "Person",
   "name": "Marian Tunza"
@@ -136,7 +136,7 @@
   .book-story .stack { top: calc(50vh - 320px); max-width: none; aspect-ratio: 1600 / 1227; }
   .book-story .step .inline { max-width: 100%; }
 
-  /* iPad y Apple Pencil. */
+  /* iPad and Apple Pencil. */
   .pad { width: 100%; margin: 56px auto 0; max-width: 1000px; }
 
   /* Privacy. */
@@ -167,23 +167,33 @@
   .faq p { font-size: 16px; margin-top: 10px; max-width: 640px; }
 
   /* Closing: the warm horizon under the last call. */
-  .closing {
-    margin-top: 160px; padding: 120px 0 0; text-align: center;
-    background: radial-gradient(120% 90% at 50% 100%, #B07763 0%, #6E4339 35%, rgba(26,21,23,0) 75%);
+  /* Closing: the last call in a panel of the book cover's dusk sky, a horizon at its foot. */
+  .closing { margin-top: 160px; }
+  .dusk {
+    position: relative; overflow: hidden; isolation: isolate;
+    border-radius: 36px; padding: 104px 24px 112px; text-align: center;
+    background: linear-gradient(180deg, #2B2027 0%, #4A3340 22%, #6E4447 44%, #985A4C 64%, #C58466 82%, #E6B497 100%);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), 0 40px 80px -30px rgba(0,0,0,.6);
   }
-  .closing .icon { width: 96px; height: 96px; border-radius: 22px; margin: 0 auto; box-shadow: 0 16px 40px rgba(0,0,0,.4); }
-  .closing h2 { margin-top: 26px; }
-  .closing p { font-size: 19px; color: rgba(242,238,232,.85); }
-  .closing .badge { margin-top: 30px; }
-  .closing .note { color: rgba(242,238,232,.72); }
+  /* a fine grain, so the sky never bands */
+  .dusk::after {
+    content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .08; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  .dusk .stars { z-index: -1; }
+  .dusk .icon { width: 88px; height: 88px; border-radius: 20px; margin: 0 auto; box-shadow: 0 18px 40px rgba(20,10,12,.45); }
+  .dusk h2 { margin-top: 28px; }
+  .dusk p { font-size: 19px; color: rgba(255,247,240,.86); }
+  .dusk .badge { margin-top: 30px; }
+  .dusk .badge img { filter: drop-shadow(0 10px 24px rgba(20,10,12,.35)); }
   footer {
-    margin-top: 110px; padding: 24px 0 40px; border-top: 1px solid rgba(242,238,232,.18);
+    margin-top: 72px; padding: 24px 0 40px; border-top: 1px solid var(--line);
     display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
     font-size: 14px; color: rgba(242,238,232,.75); text-align: left;
   }
   footer nav { display: flex; gap: 22px; }
   footer a { color: var(--text); text-decoration: none; }
-  footer .legal { flex-basis: 100%; font-size: 12px; line-height: 1.5; color: rgba(242,238,232,.55); }
+  footer .legal { flex-basis: 100%; font-size: 12px; line-height: 1.5; color: var(--tertiary); }
 
   @media (max-width: 860px) {
     section { padding-top: 100px; }
@@ -200,15 +210,31 @@
     .step { min-height: 0; opacity: 1; padding-top: 80px; }
     .step h3 { font-size: 32px; }
     .step .inline { display: block; width: 100%; max-width: 260px; margin: 36px auto 0; }
-    .closing { margin-top: 110px; padding-top: 90px; }
+    .closing { margin-top: 100px; }
+    .dusk { border-radius: 28px; padding: 76px 20px 84px; }
     footer { justify-content: center; text-align: center; }
   }
+  /* Privacy: the locked phone beside what keeps it private. */
+  .private-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: center; margin-top: 56px; text-align: left; }
+  .private-grid .phone { width: 100%; max-width: 300px; justify-self: center; }
+  .private-grid .cards { grid-template-columns: 1fr 1fr; margin-top: 0; }
+  .book-story .stack { aspect-ratio: 3000 / 2000; }
+  @media (max-width: 860px) {
+    .private-grid { grid-template-columns: 1fr; gap: 40px; }
+    .private-grid .phone { max-width: 240px; }
+    .private-grid .cards { grid-template-columns: 1fr; }
+    .book-story .step .inline { max-width: 100%; }
+  }
+  .skip { position: absolute; left: 16px; top: -60px; z-index: 10; background: var(--text); color: var(--night); padding: 8px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; }
+  .skip:focus { top: 12px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
   .langs { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: center; margin-top: 14px; font-size: 13px; }
   .langs a { text-decoration: none; opacity: .75; }
   .langs a[aria-current] { opacity: 1; font-weight: 600; }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 
 <header class="hero">
   <div class="stars" aria-hidden="true">
@@ -220,59 +246,66 @@
   <div class="wrap">
     <div class="bar">
       <a class="brand serif" href="./"><img src="../images/icon.png" alt="" width="32" height="32">Velunda</a>
-      <nav><a href="#book">El libro</a><a href="#privacy">Privacidad</a><a href="#price">Precio</a><a href="support/">Ayuda</a></nav>
+      <nav aria-label="Secciones"><a href="#day">Un día</a><a href="#book">El libro</a><a href="#privacy">Privacidad</a><a href="#price">Precio</a><a href="support/">Ayuda</a></nav>
     </div>
     <div class="hero-grid">
       <div>
         <h1 class="serif">El diario<br>que es solo tuyo.</h1>
-        <p class="lead serif">Unas líneas sinceras al día, guardadas durante años y que solo lees tú. En iPhone y iPad.</p>
+        <p class="lead serif">Palabras, fotos y tu propia voz, guardadas durante años y que solo lees tú. En iPhone y iPad.</p>
         <a class="badge" href="https://apps.apple.com/app/id6822210222"><img src="../images/app-store-badge-es.svg" alt="Descárgalo en el App Store" width="162" height="54"></a>
         <p class="note">Siete días gratis y después un único pago. Sin suscripciones.</p>
       </div>
-      <img class="phone" src="../images/es/phone-today.webp" alt="La pantalla Hoy de Velunda: la pregunta del día y una página de hace seis años" width="760" height="1551" fetchpriority="high">
+      <img class="phone" src="../images/v11/es/phone-today.webp" alt="Hoy en Velunda: la pregunta del día y una página de hace seis años" width="1470" height="3000" fetchpriority="high">
     </div>
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main">
   <div class="nots" aria-label="Lo que Velunda no tiene">
     <span>Sin cuenta</span><span>Sin anuncios</span><span>Sin rastreo</span><span>Sin IA</span><span>Sin suscripciones</span><span>Sin rachas</span>
   </div>
 
-  <section>
+  <section id="day">
     <div class="intro">
       <div class="eyebrow">Un día con Velunda</div>
-      <h2 class="serif">Cinco minutos de calma que dan forma a una vida.</h2>
-      <p>Cada mañana, una pregunta para empezar, y otra si esa no te encaja. Plantillas para la mañana, la noche, los días difíciles y las grandes decisiones. Nunca más una página en blanco.</p>
+      <h2 class="serif">Unos minutos al día, guardados durante años.</h2>
+      <p>Cada mañana hay una pregunta para empezar, y otra si esa no te encaja. Las plantillas te ayudan por la mañana, por la noche, en los días difíciles y ante las grandes decisiones, así que siempre tienes por dónde empezar.</p>
     </div>
 
     <!-- The phone stays put while the words go by; only its screen changes. -->
     <div class="story">
       <div class="steps">
         <div class="step" data-screen="0">
+          <p class="time"><b>Cuando quieras</b>Palabras, fotos, voz</p>
+          <h3 class="serif">Escríbelo, enséñalo o, simplemente, dilo.</h3>
+          <p>Añade hasta diez fotos a una página y Velunda anota la ciudad donde se hizo cada una. ¿No tienes tiempo de escribir? Graba, y Velunda puede transcribir lo que has dicho, en tu propio dispositivo.</p>
+          <img class="inline" src="../images/v11/es/phone-page.webp" alt="Una página sobre un paseo alrededor de un lago, con una grabación de voz y tres fotos de otoño" width="1470" height="3000" loading="lazy" decoding="async">
+        </div>
+        <div class="step" data-screen="1">
           <p class="time"><b>Noche</b>21:15</p>
           <h3 class="serif">Despídete del día.</h3>
           <p>Cuatro preguntas breves antes de dormir, y puedes saltarte las que quieras. Una palabra o una página: de una forma u otra, el día queda guardado.</p>
-          <img class="inline" src="../images/es/phone-close.webp" alt="Cierra el día: ¿qué destacarías de hoy?" width="760" height="1551" loading="lazy" decoding="async">
+          <img class="inline" src="../images/v11/es/phone-close.webp" alt="Cierra el día: ¿qué destacarías de hoy?" width="1470" height="3000" loading="lazy" decoding="async">
         </div>
-        <div class="step" data-screen="1">
+        <div class="step" data-screen="2">
           <p class="time"><b>Años después</b>El mismo día</p>
           <h3 class="serif">El pasado vuelve solo.</h3>
           <p>Escribe un recuerdo con el día en que pasó de verdad: tu primer piso, un verano de hace años. Cada año, en esa fecha, Velunda te lo trae de vuelta.</p>
-          <img class="inline" src="../images/es/phone-memories.webp" alt="Un recuerdo del 26 de octubre de 2020" width="760" height="1551" loading="lazy" decoding="async">
+          <img class="inline" src="../images/v11/es/phone-memory.webp" alt="Un recuerdo del 13 de noviembre de 2020: el día que nos dieron las llaves" width="1470" height="3000" loading="lazy" decoding="async">
         </div>
-        <div class="step" data-screen="2">
-          <p class="time"><b>Con los meses</b>Tus hábitos, no una puntuación</p>
-          <h3 class="serif">Conócete mejor.</h3>
-          <p>Con qué frecuencia escribes, a qué vuelves una y otra vez, cómo cambia tu ánimo con el tiempo. Todo calculado en tu dispositivo. Sin rachas que mantener ni puntuaciones que perseguir.</p>
-          <img class="inline" src="../images/es/phone-insights.webp" alt="Estadísticas: días escritos esta semana y este mes" width="760" height="1551" loading="lazy" decoding="async">
+        <div class="step" data-screen="3">
+          <p class="time"><b>Mirar atrás</b>Cada viaje, cada ciudad</p>
+          <h3 class="serif">Todos tus viajes en un solo mapa.</h3>
+          <p>Lugares reúne tus páginas ciudad a ciudad. Toca un punto y vuelves a esa playa, a esa calle, a ese lago.</p>
+          <img class="inline" src="../images/v11/es/phone-places.webp" alt="Lugares: páginas en un mapa, en Windermere, Brighton y Lisboa" width="1470" height="3000" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="screen" aria-hidden="true">
         <div class="stack">
-          <img class="on" src="../images/es/phone-close.webp" alt="" width="760" height="1551" decoding="async">
-          <img src="../images/es/phone-memories.webp" alt="" width="760" height="1551" decoding="async">
-          <img src="../images/es/phone-insights.webp" alt="" width="760" height="1551" decoding="async">
+          <img class="on" src="../images/v11/es/phone-page.webp" alt="" width="1470" height="3000" decoding="async">
+          <img src="../images/v11/es/phone-close.webp" alt="" width="1470" height="3000" decoding="async">
+          <img src="../images/v11/es/phone-memory.webp" alt="" width="1470" height="3000" decoding="async">
+          <img src="../images/v11/es/phone-places.webp" alt="" width="1470" height="3000" decoding="async">
         </div>
       </div>
     </div>
@@ -281,8 +314,8 @@
   <section id="book">
     <div class="center">
       <div class="eyebrow">Al final del año</div>
-      <h2 class="serif">Un año de tu vida, con tus propias palabras.</h2>
-      <p>Al final del año, Velunda convierte todo lo que escribiste en un libro listo para imprimir. Desplázate para hojear uno.</p>
+      <h2 class="serif">Tu año, convertido en un libro de verdad.</h2>
+      <p>Velunda reúne todo lo que escribiste, fotografiaste y dibujaste en un libro que puedes imprimir, encuadernar y poner en la estantería. Desplázate para hojear uno.</p>
     </div>
     <!-- The book stays put while the words go by; its page turns. -->
     <div class="story book-story">
@@ -290,41 +323,34 @@
         <div class="step" data-screen="0">
           <p class="time"><b>La portada</b></p>
           <h3 class="serif">Tu título, tu nombre.</h3>
-          <p>Elige una portada con los colores del amanecer o del atardecer y dale a tu año un título propio.</p>
-          <img class="inline" src="../images/es/page-cover.webp" alt="La portada del libro de 2026 en el iPad" width="1600" height="1227" loading="lazy" decoding="async">
+          <p>Una portada con los colores del amanecer o del atardecer, con el título que le des a tu año. Y una dedicatoria, si quieres.</p>
+          <img class="inline" src="../images/v11/es/book-cover.webp" alt="El libro de 2026 cerrado, con una portada con los colores del atardecer" width="3000" height="2000" loading="lazy" decoding="async">
         </div>
         <div class="step" data-screen="1">
           <p class="time"><b>Las primeras páginas</b></p>
           <h3 class="serif">Cada día que escribiste, de un vistazo.</h3>
-          <p>El libro empieza con el calendario de todo el año: un cuadrado por cada día que escribiste.</p>
-          <img class="inline" src="../images/es/page-calendar.webp" alt="El índice y el calendario de los días escritos" width="1600" height="1227" loading="lazy" decoding="async">
+          <p>El libro empieza con el índice y el calendario de todo el año: un cuadrado por cada día que escribiste.</p>
+          <img class="inline" src="../images/v11/es/book-days.webp" alt="El índice y el calendario de cada día escrito" width="3000" height="2000" loading="lazy" decoding="async">
         </div>
         <div class="step" data-screen="2">
           <p class="time"><b>Por dentro</b></p>
           <h3 class="serif">Un capítulo para cada mes.</h3>
-          <p>Cada uno se abre con una frase de ese mes y sigue con todos los días que escribiste, tus preguntas de la noche y tus reflexiones.</p>
-          <img class="inline" src="../images/es/page-chapter.webp" alt="La apertura del capítulo de octubre" width="1600" height="1227" loading="lazy" decoding="async">
+          <p>Cada uno se abre con una frase tuya y con cómo fue el mes, y sigue con todos los días que escribiste y cada noche que cerraste.</p>
+          <img class="inline" src="../images/v11/es/book-chapter.webp" alt="La apertura del capítulo de octubre" width="3000" height="2000" loading="lazy" decoding="async">
         </div>
         <div class="step" data-screen="3">
-          <p class="time"><b>Tus dibujos</b></p>
-          <h3 class="serif">También los días que dibujaste.</h3>
-          <p>Los dibujos se quedan en la página donde los hiciste, con el día en que nacieron.</p>
-          <img class="inline" src="../images/es/page-drawing.webp" alt="Una página con un dibujo de tulipanes" width="1600" height="1227" loading="lazy" decoding="async">
-        </div>
-        <div class="step" data-screen="4">
-          <p class="time"><b>La contraportada</b></p>
-          <h3 class="serif">Y tus primeras palabras del año.</h3>
-          <p>El libro termina con lo primero que escribiste ese año. Creado en tu dispositivo y nunca subido a ningún sitio.</p>
-          <img class="inline" src="../images/es/page-back.webp" alt="La última página y la contraportada, con las primeras palabras del año" width="1600" height="1227" loading="lazy" decoding="async">
+          <p class="time"><b>Tus fotos</b></p>
+          <h3 class="serif">Las imágenes, donde les corresponde.</h3>
+          <p>Las fotos acompañan a las palabras con las que van, con el día y la ciudad debajo. Creado en tu dispositivo y nunca subido a ningún sitio.</p>
+          <img class="inline" src="../images/v11/es/book-photos.webp" alt="Una doble página con la historia de un paseo y tres fotos de otoño" width="3000" height="2000" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="screen" aria-hidden="true">
         <div class="stack">
-          <img class="on" src="../images/es/page-cover.webp" alt="" width="1600" height="1227" loading="lazy" decoding="async">
-          <img src="../images/es/page-calendar.webp" alt="" width="1600" height="1227" loading="lazy" decoding="async">
-          <img src="../images/es/page-chapter.webp" alt="" width="1600" height="1227" loading="lazy" decoding="async">
-          <img src="../images/es/page-drawing.webp" alt="" width="1600" height="1227" loading="lazy" decoding="async">
-          <img src="../images/es/page-back.webp" alt="" width="1600" height="1227" loading="lazy" decoding="async">
+          <img class="on" src="../images/v11/es/book-cover.webp" alt="" width="3000" height="2000" loading="lazy" decoding="async">
+          <img src="../images/v11/es/book-days.webp" alt="" width="3000" height="2000" loading="lazy" decoding="async">
+          <img src="../images/v11/es/book-chapter.webp" alt="" width="3000" height="2000" loading="lazy" decoding="async">
+          <img src="../images/v11/es/book-photos.webp" alt="" width="3000" height="2000" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -334,19 +360,23 @@
     <div class="center">
       <div class="eyebrow">iPad y Apple Pencil</div>
       <h2 class="serif">Espacio para escribir. Sitio para dibujar.</h2>
-      <p>En el iPad, el calendario está justo al lado de la página. Y los días en que no salen las palabras, coge el Apple Pencil: tu dibujo se queda con la página y acaba en tu libro.</p>
+      <p>En el iPad, la página tiene espacio para respirar. Y los días en que no salen las palabras, coge el Apple Pencil: el dibujo se queda con la página y acaba en tu libro.</p>
     </div>
-    <img class="pad" src="../images/es/ipad-drawing.webp" alt="Tulipanes en un jarrón, dibujados en el iPad" width="1600" height="1227" loading="lazy" decoding="async">
+    <img class="pad" src="../images/v11/es/ipad-drawing.webp" alt="Tulipanes en un jarrón, dibujados en el iPad" width="3000" height="2300" loading="lazy" decoding="async">
   </section>
 
   <section id="privacy" class="private">
     <div class="eyebrow">Privado de verdad</div>
     <h2 class="serif">Lo que piensas no es asunto de nadie.</h2>
-    <p class="lead">Sin cuenta. Sin anuncios. Sin rastreo. Sin analíticas. Velunda no recopila nada, y lo que escribes está cifrado de extremo a extremo.</p>
-    <div class="cards">
-      <div><h3>Cifrado de extremo a extremo</h3><p>Tu diario se sincroniza con tu iCloud privado y todo lo que escribes está cifrado.</p></div>
-      <div><h3>Bloqueado cuando quieras</h3><p>Face ID o Touch ID. Los widgets y los recordatorios nunca muestran lo que has escrito.</p></div>
-      <div><h3>Siempre tuyo</h3><p>Exporta una copia de seguridad completa, en Markdown o en PDF, cuando quieras.</p></div>
+    <p class="lead">Velunda no tiene cuentas ni servidores propios. No recopila nada, y todo lo que escribes está cifrado de extremo a extremo.</p>
+    <div class="private-grid">
+      <img class="phone" src="../images/v11/es/phone-lock.webp" alt="Velunda bloqueado, que se abre con Face ID" width="1470" height="3000" loading="lazy" decoding="async">
+      <div class="cards">
+        <div><h3>Protegido con Face ID</h3><p>O con Touch ID, o con tu código. Los widgets y los recordatorios nunca muestran lo que has escrito.</p></div>
+        <div><h3>Cifrado, en todos tus dispositivos</h3><p>Tu diario se sincroniza con tu propio iCloud, así el iPhone y el iPad están siempre al día. Cada palabra, cada foto y cada grabación están cifradas.</p></div>
+        <div><h3>Tu voz se queda contigo</h3><p>Las grabaciones se transcriben en tu dispositivo. El audio nunca se envía a nadie.</p></div>
+        <div><h3>Siempre tuyo</h3><p>Exporta una copia de seguridad completa, en Markdown o en PDF cuando quieras, con fotos y grabaciones incluidas.</p></div>
+      </div>
     </div>
   </section>
 
@@ -388,8 +418,12 @@
         <p>Sí, mediante iCloud, cuando los dos dispositivos usan la misma cuenta de Apple.</p>
       </details>
       <details>
+        <summary>¿Se suben mis fotos y grabaciones a algún sitio?</summary>
+        <p>Solo a tu propio iCloud, cifradas, si lo usas. Las grabaciones se transcriben en tu dispositivo y el audio no sale de él de ninguna otra forma. Para indicar la ciudad donde se hizo una foto, Velunda consulta su ubicación a Mapas de Apple y solo guarda la ciudad; puedes desactivarlo en Ajustes.</p>
+      </details>
+      <details>
         <summary>¿Puedo llevarme mi diario?</summary>
-        <p>Sí. Puedes exportar una copia de seguridad para volver a importarla, archivos Markdown, un PDF o los tres en un solo archivo comprimido.</p>
+        <p>Sí. Puedes exportar una copia de seguridad para volver a importarla, archivos Markdown con tus fotos y grabaciones, un PDF o los tres en un solo archivo comprimido.</p>
       </details>
       <details>
         <summary>¿En qué idiomas está?</summary>
@@ -401,14 +435,21 @@
 
 <section class="closing">
   <div class="wrap">
-    <img class="icon" src="../images/icon.png" alt="" width="96" height="96">
-    <h2 class="serif">Tu historia merece guardarse.</h2>
-    <p>Empieza esta noche. La primera semana corre de nuestra cuenta.</p>
-    <a class="badge" href="https://apps.apple.com/app/id6822210222"><img src="../images/app-store-badge-es.svg" alt="Descárgalo en el App Store" width="162" height="54"></a>
+    <div class="dusk">
+      <div class="stars" aria-hidden="true">
+        <i style="left:12%;top:10%"></i><i class="s" style="left:22%;top:24%"></i><i class="s" style="left:34%;top:8%"></i>
+        <i class="s" style="left:46%;top:18%"></i><i style="left:63%;top:9%"></i><i class="s" style="left:72%;top:26%"></i>
+        <i style="left:84%;top:13%"></i><i class="s" style="left:91%;top:30%"></i><i class="s" style="left:6%;top:34%"></i>
+      </div>
+      <img class="icon" src="../images/icon.png" alt="" width="88" height="88">
+      <h2 class="serif">Tu historia merece guardarse.</h2>
+      <p>Empieza esta noche. La primera semana corre de nuestra cuenta.</p>
+      <a class="badge" href="https://apps.apple.com/app/id6822210222"><img src="../images/app-store-badge-es.svg" alt="Descárgalo en el App Store" width="162" height="54"></a>
+    </div>
     <footer>
       <span>© 2026 Marian Tunza</span>
       <nav><a href="support/">Ayuda</a><a href="privacy/">Privacidad</a><a href="mailto:contact@getvelunda.com">Contacto</a></nav>
-      <p class="legal">Apple, el logotipo de Apple, iPhone, iPad y Apple Pencil son marcas comerciales de Apple Inc., registradas en EE. UU. y en otros países. App Store es una marca de servicio de Apple Inc., registrada en EE. UU. y en otros países.</p>
+      <p class="legal">Apple, el logotipo de Apple, iPhone, iPad y Apple Pencil son marcas comerciales de Apple Inc., registradas en EE. UU. y en otros países. App Store es una marca de servicio de Apple Inc., registrada en EE. UU. y en otros países.</p>
     
     
     
